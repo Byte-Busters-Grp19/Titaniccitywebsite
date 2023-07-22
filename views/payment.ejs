@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Processor</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="payment-container">
+        <h1>Payment Processor</h1>
+        <div class="payment-options" id="payment-options">
+            <h2>Please choose your preferred payment network:</h2>
+            <select id="network-dropdown">
+                <option value="">Select Payment Network</option>
+                <option value="mtn">MTN</option>
+                <option value="vodafone">Vodafone</option>
+                <option value="airteltigo">AirtelTigo</option>
+                <option value="ghanapay">GhanaPay</option>
+                <!--more payment options will be as needed -->
+            </select>
+           
+        </div>
+        <div class="payment-steps" id="payment-steps">
+            <!-- Steps will be dynamically added here -->
+        </div>
+    </div>
+    <button id="change-network" onclick="goBackToOptions()">Change Network</button>
+    <script src="assets/js/payment process.js"></script>
+</body>
+</html>

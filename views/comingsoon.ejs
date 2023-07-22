@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coming Soon</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 100px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      color: #fff;
+    }
+
+    .countdown .unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px;
+    }
+
+    .countdown .value {
+      font-size: 56px;
+      color: #ffcc00;
+      margin-bottom: 5px;
+    }
+
+    .countdown .label {
+      font-size: 18px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Coming Soon</h1>
+  <p>We're working on something exciting! Stay tuned for updates.</p>
+  <div class="countdown">
+    <div class="unit">
+      <span id="days" class="value"></span>
+      <span class="label">Days</span>
+    </div>
+    <div class="unit">
+      <span id="hours" class="value"></span>
+      <span class="label">Hours</span>
+    </div>
+    <div class="unit">
+      <span id="minutes" class="value"></span>
+      <span class="label">Minutes</span>
+    </div>
+    <div class="unit">
+      <span id="seconds" class="value"></span>
+      <span class="label">Seconds</span>
+    </div>
+  </div>
+
+  <script>
+    // Countdown timer
+    const countDownDate = new Date("2023-07-31").getTime();
+    const countdown = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+
+      if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById("days").textContent = "0";
+        document.getElementById("hours").textContent = "0";
+        document.getElementById("minutes").textContent = "0";
+        document.getElementById("seconds").textContent = "0";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

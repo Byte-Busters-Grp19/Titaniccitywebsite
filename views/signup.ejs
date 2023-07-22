@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Sign Up</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bolder;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #006400;
+      color: #006400;
+    }
+
+    .show-password {
+      display: inline-block;
+      margin-left: 5px;
+      color: #006400;
+      cursor: pointer;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #006400;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004f00;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .login-link a {
+      color: #006400;
+      text-decoration: none;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create an Account</h1>
+      <form action="/signup" method="POST" id="signup-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <span class="show-password">Show</span>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirmPassword" required>
+        <span class="show-password">Show</span>
+      </div>
+        <div class="form-group">
+          <button type="submit">Sign Up</button>
+        </div>
+      </form>
+      <div class="login-link">
+        <p>Already have an account? <a href="/login">Log in here</a></p>
+      </div>
+    </div>
+
+    <script>
+      // function redirectToHomepage(event) {
+      //   event.preventDefault(); //Prevent form submission
+      //   //Perform form validation and other necessary checks
+      //   //If everything is valid, redirect the user to the homepage
+      //   window.location.href = "index.html"
+      // }
+      document.addEventListener("DOMContentLoaded", function () {
+      const passwordInputs = document.querySelectorAll("input[type='password']");
+      const showPasswordToggles = document.querySelectorAll(".show-password");
+
+      showPasswordToggles.forEach((toggle, index) => {
+        toggle.addEventListener("click", function () {
+          if (passwordInputs[index].type === "password") {
+            passwordInputs[index].type = "text";
+            toggle.textContent = "Hide";
+          } else {
+            passwordInputs[index].type = "password";
+            toggle.textContent = "Show";
+          }
+        });
+        });
+      });
+    </script>
+  </body>
+</html>
