@@ -44,6 +44,7 @@ For any inquiries or support, please contact our team at dosowah@st.ug.edu.gh.
 Thank you for visiting our restaurant website!
 
 ## Running the website from vscode
+
 run the following code
 1. npm install dotenv
 2. node server.js
