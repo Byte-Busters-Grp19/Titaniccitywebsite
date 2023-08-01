@@ -19,7 +19,7 @@ To run this website locally, follow these steps:
 1. Clone this repository to your local machine.
 2. Install the necessary dependencies using npm install or your preferred package manager.
 3. Set up the database and configure the connection in the config.js file.
-4. Start the server using npm start.
+4. Start the server using "npm start" in terminal.
 5. Access the website in your browser at http://localhost:3000.
 
 ## Technologies Used
@@ -43,9 +43,13 @@ For any inquiries or support, please contact our team at dosowah@st.ug.edu.gh.
 
 Thank you for visiting our restaurant website!
 
-## Running the website from vscode
+## Running the website from vscode in terminal
 
-run the following code
+run the following code i  terminal
 1. npm install dotenv
 2. node server.js
+
+## Access the Website on your browser
+
+http://localhost:3000
 
