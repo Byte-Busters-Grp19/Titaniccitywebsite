@@ -20,7 +20,7 @@ To run this website locally, follow these steps:
 2. Install the necessary dependencies using npm install or your preferred package manager.
 3. Set up the database and configure the connection in the config.js file.
 4. Start the server using "npm start" in terminal.
-5. Access the website in your browser at http://localhost:3000.
+5. Access the website in your browser at http://localhost:8000.
 
 ## Technologies Used
 
@@ -51,5 +51,5 @@ run the following code i  terminal
 
 ## Access the Website on your browser
 
-http://localhost:3000
+http://localhost:8000
 
